@@ -28,8 +28,12 @@ body, h5{
    
 }
 
+
+
 .box-right-section{
     overflow: hidden;
+    width: 710px;
+    
 }
 
 
@@ -40,6 +44,7 @@ body, h5{
     float: left; 
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
+
 }
 
 .center1:hover{
@@ -82,16 +87,43 @@ body, h5{
     transition: all 0.5s;
 }
 
+.box-right-section-center4{
+    width: 340px;
+    height: 200px;
+    overflow: hidden;
+    float: left; 
+}
+
 .center4{
     width: 340px;
     height: 200px;
-    float: left; 
+    
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
     margin-right: 27px;
 }
 
 .center4:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.box-right-section-center5{
+    width: 340px;
+    height: 200px;
+    overflow: hidden;
+    float: right;
+}
+
+.center5{
+    width: 340px;
+    height: 200px; 
+    box-shadow: 2px 2px 2px 2px #ccc;
+    cursor: pointer;
+    margin-right: 27px;
+}
+
+.center5:hover{
     transform: scale(1.1);
     transition: all 0.5s;
 }
