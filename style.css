@@ -4,12 +4,50 @@ body, h5{
     font-family: 'Poppins', sans-serif;
 }
 
+.pesquisa-login{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.pesquisa-login .midia {
+    margin-left: 80px;
+}
+
+.pesquisa-login .midia img{
+    float: left;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.div_pesquisa{
+    float: right;
+    margin-right: 80px;
+   
+}
+
+.ipt_pesquisa{
+    width: 200px;
+    height: 18px;
+    float: left;
+    outline: 0;
+}
+
+
+.aparecer{
+    float: left;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
 .header{
     height: 150px;
 }
 
  h2{
     text-align: center;
+    
 }
 
 
@@ -155,6 +193,62 @@ ul li:hover{
     float: left;
 }
 
+
+.mid-section{
+    width: 100%;
+    height: 260px;
+    background-color: #ccc;
+}
+
+.mid-section .box-img{
+    width: 120px;
+    height: 180px;
+    float: left;
+    margin: 30px 10px 0 120px;
+    /* background-color: black; */
+    
+}
+
+.mid-section .box-img .img1{
+    background-image: url(../projetoIndividual/image/family.png);
+    height: 140px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+
+.mid-section .box-img h5{
+    /* color: white; */
+    text-align: center;
+}
+
+.mid-section .box-img .img2{
+    background-image: url(../projetoIndividual/image/jacket.png);
+    height: 140px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.mid-section .box-img .img3{
+    background-image: url(../projetoIndividual/image/robot-suitcase.png);
+    height: 140px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.mid-section .box-img .img4{
+    background-image: url(../projetoIndividual/image/passport.png);
+    height: 140px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.final-post{
+    margin-top: 30px;
+    width: 100%;
+    height: 900px;
+}
+
 .teste1{
     width: 340px;
     height: 250px;
@@ -171,17 +265,49 @@ ul li:hover{
     float: right;
 }
 
-
-.mid-section{
+.teste1 .img-austria{
+    background-image: url(../projetoIndividual/image/hallstatt.jpg);
     width: 100%;
-    height: 200px;
-    background-color: #ccc;
+    height: 100%;
+    background-size: cover;
 }
 
-.final-post{
-    margin-top: 30px;
+.teste2 .img-lisboa{
+    background-image: url(../projetoIndividual/image/lisboa.jpg);
     width: 100%;
-    height: 900px;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.teste1 .img-atacama{
+    background-image: url(../projetoIndividual/image/atacama.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.teste2 .img-berlim{
+    background-image: url(../projetoIndividual/image/berlim.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+.teste1 .img-gramado{
+    background-image: url(../projetoIndividual/image/gramado.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.teste2 .img-foz{
+    background-image: url(../projetoIndividual/image/foz.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
 }
 
 .right-post{
