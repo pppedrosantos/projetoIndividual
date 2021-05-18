@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pesquisa-login">
+
+
+        <div class="midia">
+            <div> <img src="..//projetoIndividual/icons/facebook.png" alt=""></div>
+            <div> <img src="icons/youtube-logotype.png" alt=""></div>
+            <div> <img src="icons/instagram.png" alt=""></div>
+        </div>
+
+        <div class="div_pesquisa">
+            <img onclick="aparecer()" src="..//projetoIndividual/icons/lupa-de-pesquisa.png" class="aparecer" alt="">
+            <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
+            <img id="logar" onclick="login()" class="aparecer" src="..//projetoIndividual/icons/user.png" alt="">
+            <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
+                src="..//projetoIndividual/icons/login.png" alt="">
+
+        </div>
+    </div>
+
+    <div class="header">
+
+        <div class="container">
+            <h2>Logo</h2>
+            <hr>
+
+            <nav class="barra-navecao">
+                <ul class="lista-ul">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <li>Sobre</li>
+                    <li>Fórum</li>
+                    <a href="contato.html">
+                        <li>Contato</li>
+                    </a>
+                    <li>Login</li>
+                </ul>
+                <!--lista-navegacao-->
+            </nav>
+            <!--barra-navecao-->
+        </div>
+        <!--container-->
+    </div>
+
+    <div class="center">
+        <div class="container-login">
+            <div class="box-login">
+                <div class="left-box-login"></div>
+                <div class="right-box-login">
+
+                    <form id="form_login" class="form-login" style="display: block;">
+                        <h3>Bem-vindo de volta!</h3>
+                        <input class="ipt_padrao" type="text" placeholder="login"><br>
+                        <input class="ipt_padrao" type="text" placeholder="password"><br>
+                        <button class="btn_entrar">Entrar</button>
+                        <div onclick="registrar()" class="forgot"> Já possui cadastro? Se cadastre. </div>
+                    </form>
+
+                    <form id="form_registro" style="display: none;" class="form-registrar">
+                        <h3>Cadastrar</h3>
+                        <input class="ipt_padrao" type="text" placeholder="nome"><br>
+                        <input class="ipt_padrao" type="text" placeholder="e-mail"><br>
+                        <input class="ipt_padrao" type="password" placeholder="senha"><br>
+                        <input class="ipt_padrao" type="password" placeholder="confirme a senha"><br>
+                        <button class="btn_entrar">Registrar</button>
+                        <div onclick="logar()" class="forgot">Já pode se logar.</div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer"> Desenvolvido por um aluno Bandtec</div>
+
+</body>
+
+</html>
+
+<script>
+
+    function registrar(){
+        
+        form_registro.style.display = 'block';
+        form_login.style.display = 'none';
+
+    }
+
+    function logar(){
+        form_registro.style.display = 'none';
+        form_login.style.display = 'block';
+    }
+
+</script>

@@ -4,6 +4,9 @@ body, h5{
     font-family: 'Poppins', sans-serif;
 }
 
+li, ul{
+    text-decoration: none;
+}
 .pesquisa-login{
     width: 100%;
     overflow: hidden;
@@ -311,12 +314,52 @@ ul li:hover{
 }
 
 .right-post{
-   width: 320px;
+   width: 350px;
+
     float: right;
 }
 
 .right-post > h5{
     text-align: right;
+    
+}
+
+.hospedagem-box{
+    margin-top: 15px;
+    float: right;
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.hospedagem1{
+    background-image: url(../projetoIndividual/image/booking.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.hospedagem2{
+    background-image: url(../projetoIndividual/image/hw.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+   
+   
+}
+
+
+.hospedagem3{
+    background-image: url(../projetoIndividual/image/airbnb1.png);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+   
 }
 
 

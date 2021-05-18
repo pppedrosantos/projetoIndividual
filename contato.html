@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pesquisa-login">
+
+
+        <div class="midia">
+            <div> <img src="..//projetoIndividual/icons/facebook.png" alt=""></div>
+            <div> <img src="icons/youtube-logotype.png" alt=""></div>
+            <div> <img src="icons/instagram.png" alt=""></div>
+        </div>
+
+        <div class="div_pesquisa">
+            <img onclick="aparecer()" src="..//projetoIndividual/icons/lupa-de-pesquisa.png" class="aparecer" alt="">
+            <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
+            <a href="login.html"><img id="logar" onclick="login()" class="aparecer" src="..//projetoIndividual/icons/user.png" alt=""></a>
+            <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
+                src="..//projetoIndividual/icons/login.png" alt="">
+
+        </div>
+    </div>
+
+    <div class="header">
+
+        <div class="container">
+            <h2>Logo</h2>
+            <hr>
+
+            <nav class="barra-navecao">
+                <ul class="lista-ul">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <li>Sobre</li>
+                    <li>Fórum</li>
+                    <li>Contato</li>
+                    <a href="login.html">
+                        <li>Login</li>
+                    </a>
+                </ul>
+                <!--lista-navegacao-->
+            </nav>
+            <!--barra-navecao-->
+        </div>
+        <!--container-->
+    </div>
+
+    <div class="contato-center">
+        <div class="contato-container" >
+            <div class="box-contato">
+                <div class="left-contato">
+                    <h3>Contate-nos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos temporibus aut consectetur ducimus!</p>
+
+                    <div class="contato-email"><img style="height: 30px;" src="icons/o-email.png" alt=""> <p>E-mail <br> info@gmail.com</p></div>
+
+                    <div class="contato-email"><img style="height: 30px;" src="icons/receptor-de-telefone.png"> <p>Telefone <br> 0000-0000</p></div>
+                </div>
+
+                <div class="right-contato">
+                    <input class="ipt-padrao" placeholder="nome" type="text"> <br>
+                    <input class="ipt-padrao" placeholder="e-mail" type="text"> <br>
+                    <textarea class="ipt-msg" placeholder="esccreva sua mensagem"></textarea><br>
+                    <button class="btn-enviar">Enviar</button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer"> Desenvolvido por um aluno Bandtec</div>
+    
+</body>
+</html>

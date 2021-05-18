@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
         <div class="div_pesquisa">
             <img onclick="aparecer()" src="..//projetoIndividual/icons/lupa-de-pesquisa.png" class="aparecer" alt="">
             <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
-            <img id="logar" onclick="login()" class="aparecer" src="..//projetoIndividual/icons/user.png" alt="">
+            <a href="login.html"><img id="logar" onclick="login()" class="aparecer" src="..//projetoIndividual/icons/user.png" alt=""></a>
             <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
                 src="..//projetoIndividual/icons/login.png" alt="">
 
@@ -43,8 +43,12 @@
                     <li>Home</li>
                     <li>Sobre</li>
                     <li>Fórum</li>
-                    <li>Contato</li>
-                    <li>Login</li>
+                    <a href="contato.html">
+                        <li>Contato</li>
+                    </a>
+                    <a style="text-decoration: none;" href="login.html">
+                        <li>Login</li>
+                    </a>
                 </ul>
                 <!--lista-navegacao-->
             </nav>
@@ -159,8 +163,31 @@
             </div>
 
             <div class="right-post">
-                <h5>PROTÓTIPO</h5>
+                <h5>SITES DE HOSPEDAGEM</h5>
+            
                 <hr>
+
+                <a target="_blank" href="https://www.booking.com" >
+                    <div class="hospedagem-box">
+                        <div  class="hospedagem1">
+                        </div>
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://www.hostelworld.com/">
+                    <div class="hospedagem-box">
+                        <div class="hospedagem2">
+                        </div>
+                    </div>
+                </a>
+
+                <a target="_blank" href="https://www.airbnb.com.br/">
+                    <div class="hospedagem-box">
+                        <div class="hospedagem3">
+                        </div>
+                    </div>
+                </a>
+
 
             </div>
         </div>
