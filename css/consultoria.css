@@ -3,11 +3,11 @@
 }
 
 .center{
-    height: 1250px;
+    height: 610px;
 }
 .center-sobre{
-    background-color: gray;
-    height: 900px;
+    
+    height: 560px;
     margin: 0 200px;
 }
 
@@ -15,7 +15,7 @@
     width: 40%;
     height: 500px;
     float: left;
-    background-image: url(..//projetoIndividual/image/sobre.jpg);
+    background-image: url(..//image/img-consultoria.jpg);
     background-size: cover;
 }
 
@@ -29,22 +29,23 @@
 
 .box-right{
     width: 490px;
-    margin-top: 70px;
+    margin-top: 30px;
     margin-left: 40px;
 }
 
-.box-right h5, .box-left h5 {
+.box-right h5 {
     color: rgb(208, 99, 60);
     font-size: 25px;
 
 }
 
-.box-right p, .box-left p{
+.box-right p{
     font-size: 20px;
+    text-align: justify;
 }
 
 .left-center-sobre2{
-    height: 400px;
+    height: 500px;
     width: 55%;
      background-color: rgb(218, 218, 218);
     float: left;
@@ -58,10 +59,10 @@
     text-align: right;
 }
 
-.right-center-sobre2{
-    background-image: url(..//projetoIndividual/image/valoresjpg.jpg);
-    background-size: cover;
-    float: right;
-    width: 45%;
+.left-center-sobre2{
     height: 400px;
+    width: 100%;
+    background-image: url(..//image/consultoria-plan.jpg);
+    background-size: cover;
+    
 }

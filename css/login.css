@@ -9,7 +9,7 @@
 }
 
 .box-login{
-    margin-top: 40px;
+   
     height: 500px;
     background-color: rgb(228, 228, 228);
     box-shadow: rgba(237, 237, 237, 0.802) 10px 10px;
@@ -19,7 +19,7 @@
     float: left;
     width: 250px;
     height: 100%;
-    background-image: url(../projetoIndividual/image/img-login.jpg);
+    background-image: url(..//image/img-login.jpg);
     background-size: cover;
 }
 

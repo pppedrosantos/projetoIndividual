@@ -52,7 +52,7 @@ body, h5, h2{
 }
 
 .header{
-    height: 250px;
+    height: 300px;
 }
 
  h2{
@@ -86,7 +86,6 @@ body, h5, h2{
 
 
 .center1{
-    background-image: ("https://veja.abril.com.br/wp-content/uploads/2016/05/alx_lista-capitais-europa-mundo-20100806-002_original3.jpeg");
     width: 710px;
     height: 400px;
     float: left; 
@@ -178,7 +177,7 @@ body, h5, h2{
 
 
 .barra-navecao{
-    padding-left: 25%;
+    padding-left: 20%;
     overflow: hidden;
     
 }
@@ -222,7 +221,7 @@ ul li:hover{
 }
 
 .mid-section .box-img .img1{
-    background-image: url(../projetoIndividual/image/family.png);
+    background-image: url(../image/family.png);
     height: 140px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -235,21 +234,21 @@ ul li:hover{
 }
 
 .mid-section .box-img .img2{
-    background-image: url(../projetoIndividual/image/jacket.png);
+    background-image: url(../image/jacket.png);
     height: 140px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .mid-section .box-img .img3{
-    background-image: url(../projetoIndividual/image/robot-suitcase.png);
+    background-image: url(../image/robot-suitcase.png);
     height: 140px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .mid-section .box-img .img4{
-    background-image: url(../projetoIndividual/image/passport.png);
+    background-image: url(../image/passport.png);
     height: 140px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -278,14 +277,14 @@ ul li:hover{
 }
 
 .teste1 .img-austria{
-    background-image: url(../projetoIndividual/image/hallstatt.jpg);
+    background-image: url(../image/hallstatt.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 
 .teste2 .img-lisboa{
-    background-image: url(../projetoIndividual/image/lisboa.jpg);
+    background-image: url(../image/lisboa.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -293,14 +292,14 @@ ul li:hover{
 }
 
 .teste1 .img-atacama{
-    background-image: url(../projetoIndividual/image/atacama.jpg);
+    background-image: url(../image/atacama.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 
 .teste2 .img-berlim{
-    background-image: url(../projetoIndividual/image/berlim.jpg);
+    background-image: url(../image/berlim.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -308,14 +307,14 @@ ul li:hover{
 }
 
 .teste1 .img-gramado{
-    background-image: url(../projetoIndividual/image/gramado.jpg);
+    background-image: url(../image/gramado.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
 }
 
 .teste2 .img-foz{
-    background-image: url(../projetoIndividual/image/foz.jpg);
+    background-image: url(../image/foz.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -342,7 +341,7 @@ ul li:hover{
 }
 
 .hospedagem1{
-    background-image: url(../projetoIndividual/image/booking.png);
+    background-image: url(../image/booking.png);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -352,7 +351,7 @@ ul li:hover{
 }
 
 .hospedagem2{
-    background-image: url(../projetoIndividual/image/hw.png);
+    background-image: url(../image/hw.png);
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -363,7 +362,7 @@ ul li:hover{
 
 
 .hospedagem3{
-    background-image: url(../projetoIndividual/image/airbnb1.png);
+    background-image: url(../image/airbnb1.png);
     width: 100%;
     height: 100%;
     background-size: cover;

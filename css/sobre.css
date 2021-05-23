@@ -1,0 +1,67 @@
+.header-sobre{
+    height: 250px;
+}
+
+.center{
+    height: 1250px;
+}
+.center-sobre{
+    background-color: gray;
+    height: 900px;
+    margin: 0 200px;
+}
+
+.left-center-sobre{
+    width: 40%;
+    height: 500px;
+    float: left;
+    background-image: url(..//image/sobre.jpg);
+    background-size: cover;
+}
+
+.right-center-sobre{
+    height: 500px;
+    width: 60%;
+    background-color: rgb(218, 218, 218);
+    float: right;
+}
+
+
+.box-right{
+    width: 490px;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+
+.box-right h5, .box-left h5 {
+    color: rgb(208, 99, 60);
+    font-size: 25px;
+
+}
+
+.box-right p, .box-left p{
+    font-size: 20px;
+}
+
+.left-center-sobre2{
+    height: 400px;
+    width: 55%;
+     background-color: rgb(218, 218, 218);
+    float: left;
+    
+}
+
+.box-left{
+    width: 490px;
+    margin-top: 70px;
+    margin-left: 10px;
+    text-align: right;
+}
+
+.right-center-sobre2{
+    background-image: url(..//image/valoresjpg.jpg);
+    background-size: cover;
+    float: right;
+    width: 45%;
+    height: 400px;
+}
