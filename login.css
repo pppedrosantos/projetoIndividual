@@ -43,6 +43,7 @@
     width: 300px;
     outline: 0;
     padding-left: 10px;
+    border: 1px solid;
 }
 
 .ipt_padrao:hover{
@@ -70,3 +71,4 @@
     font-size: 15px;
     cursor: pointer;
 }
+

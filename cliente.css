@@ -1,0 +1,91 @@
+
+
+.nav-cliente{
+    width: 18%;
+    height:625px;
+    float: left;
+    background-image: linear-gradient(white, rgb(185, 183, 183));
+    
+}
+
+.container-cliente{
+    margin: 0 50px;
+    /* background-color: olivedrab; */
+    width: 155px;
+    height: 595px;
+    text-align: center;
+}
+
+.logo-cliente{
+    background-image: url(..//projetoIndividual/image/thinktrip\ .png);
+    width: 130px;
+    height: 155px;
+    margin-top: 30px;
+    background-size: cover;
+    text-align: center;
+}
+
+.right-tela{
+    float: right;
+    width: 82%;
+    height: 625px;
+    background-color: rgb(208, 205, 205);
+    
+}
+
+.container-right-tela{
+    width: 910px;
+    margin-top: 70px;
+    margin-left: 90px;
+    height: 580px;
+    text-align: justify;
+}
+
+.form-50{
+    margin-top: 10px;
+    width: 440px;
+    height: 30px;
+    float: left;
+    outline: 0;
+    font-size: 23px;
+}
+
+.form-50-2{
+    margin-top: 10px;
+    width: 444px;
+    height: 30px;
+    float: right;
+    outline: 0;
+    font-size: 23px;
+}
+
+.form-100{
+    margin-top: 10px;
+    width: 902px;
+    height: 30px;
+    outline: 0;
+    font-size: 23px;
+}
+
+.combo-padrao{
+    margin-top: 10px;
+    width: 100%;
+    height: 34px;
+    outline: 0;
+    font-size: 23px;
+}
+
+.btn_enviar{
+    margin-top: 20px;
+    margin-left: 30%;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0;
+    background-color: rgb(208, 99, 60);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+

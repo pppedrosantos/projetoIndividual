@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icons/world.png" type="image/x-icon">
 </head>
 
 <body>
@@ -35,13 +36,15 @@
     <div class="header">
 
         <div class="container">
-            <h2>Logo</h2>
+            <div><img class="logo" src="image/thinktrip .png" alt=""></div>
             <hr>
 
             <nav class="barra-navecao">
                 <ul class="lista-ul">
                     <li>Home</li>
-                    <li>Sobre</li>
+                    <a href="sobre.html">
+                        <li>Sobre</li>
+                    </a>
                     <li>Fórum</li>
                     <a href="contato.html">
                         <li>Contato</li>
@@ -69,7 +72,7 @@
                 <div class="box-right-section">
 
                     <img class="center1"
-                        src="https://veja.abril.com.br/wp-content/uploads/2016/05/alx_lista-capitais-europa-mundo-20100806-002_original3.jpeg"
+                        src="../projetoIndividual/image/Inserirm subtítulo.jpg"
                         alt="">
 
                 </div>
@@ -77,11 +80,11 @@
                 <br>
                 <div class="box-right-section-center4">
                     <img class="center4"
-                        src="https://araraunaturismo.com.br/wp-content/uploads/2015/08/riodejaneiro.jpg" alt="">
+                        src="image/rj.jpg" alt="">
                 </div>
 
                 <div class="box-right-section-center5">
-                    <img class="center5" src="https://cdn.getyourguide.com/img/location/5824abf030d78.jpeg/88.jpg"
+                    <img class="center5" src="image/sp.jpg"
                         alt="">
                 </div>
 
@@ -93,13 +96,13 @@
             <div class="left-section">
                 <div class="box-left-section">
                     <img class="center2"
-                        src="https://s2.glbimg.com/Cfh-XvNG5avMMbyWsvIj0DjZhME=/0x0:2248x3000/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2020/x/b/PDBPseQRWBCxaeOCuIKQ/nestor-barbitta-qhq4wgx77g0-unsplash.jpg"
+                        src="image/argentina.jpg"
                         alt="">
                 </div>
                 <br>
                 <div class="box-left-section">
                     <img class="center3"
-                        src="https://veja.abril.com.br/wp-content/uploads/2020/10/shutterstock_1789797269.jpg.jpg"
+                        src="image/uruguai.jpg"
                         alt="">
                 </div>
             </div>
@@ -207,7 +210,7 @@
 
     var contador = 0;
     function aparecer() {
-
+        
         contador++;
         if (contador % 2 == '1') {
             ipt_teste.style.display = 'block'

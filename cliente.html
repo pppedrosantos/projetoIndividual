@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem vindo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cliente.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icons/world.png" type="image/x-icon">
+</head>
+<body>
+    <div class="nav-cliente">
+        <div class="container-cliente">
+            <div class="logo-cliente"></div>
+            <div id="b_usuario"><h4>Seja bem vindo, Pedro!</h4></div>
+        <br>
+            <div class="formulario"><h5>Consulta:</h5></div>
+            
+            <div class="viagens"><h5>Suas Viagens:</h5></div>
+            <br><br> <br><br><br>
+            <div class="viagens"><h5>Logout</h5></div>
+        </div>
+
+    </div>
+
+    <div class="right-tela">
+        <div class="container-right-tela">
+            <form action="">
+            <h2>Preencha o formulário para fazer sua consulta:</h2>
+            <input class="form-100" placeholder="Nome Completo" type="text">
+            <input class="form-50" placeholder="E-mail" type="text">
+            <input class="form-50-2" placeholder="Telefone" type="text">
+            <input class="form-50" placeholder="Idade" type="text">
+            <input class="form-50-2" placeholder="Quantas pessoas?" type="text">
+            <input class="form-100" placeholder="Tempo de duração de viagem em dias" type="text">
+            <input class="form-100" placeholder="Quais os destinos?" type="text">
+            <input class="form-100" placeholder="Por onde deseja ser contatado(a)?" type="text">
+            <input class="form-100" placeholder="Qual parte do dia?" type="text">
+            <br>
+            <button onclick="enviar()" class="btn_enviar">Enviar</button>
+        </form>
+        <br>
+        
+        
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+
+    function enviar(){
+        alert('Suas informações foram enviadas com sucesso. Dentro de 1 semana entraremos em contatos com você.')
+        
+    }
+</script>
