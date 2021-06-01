@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cliente2.css">
+    <link rel="shortcut icon" href="icons/world.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="funcoes.js"></script>
+</head>
+
+<body onload="obterPublicacoes()">
+    <div class="pesquisa-login">
+
+
+        <div class="midia">
+            <div> <img src="..//projetoIndividual/icons/facebook.png" alt=""></div>
+            <div> <img src="icons/youtube-logotype.png" alt=""></div>
+            <div> <img src="icons/instagram.png" alt=""></div>
+        </div>
+
+        <div class="div_pesquisa">
+            <img onclick="aparecer()" src="..//projetoIndividual/icons/lupa-de-pesquisa.png" class="aparecer" alt="">
+            <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
+            <a href="login.html"><img id="logar" onclick="login()" class="aparecer"
+                    src="..//projetoIndividual/icons/user.png" alt=""></a>
+            <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
+                src="..//projetoIndividual/icons/login.png" alt="">
+
+        </div>
+    </div>
+
+    <div class="header-login">
+
+        <div class="container">
+            <div><a href="index.html"><img class="logo" src="image/thinktrip .png" alt=""></a></div>
+            <hr>
+
+        </div>
+        <!--container-->
+    </div>
+
+    <div class="container">
+        <h3>Olá, <span style="color: rgb(208, 99, 60);;" id="b_usuario"></span>. Seja bem-vindo!</h3>
+        <div class="center-user">
+            <h3>Menu</h3>
+            <div class="container-menu">
+                <div onclick="formulario()" class="box-container-menu">
+                    <div class="formulario"></div>
+                    <p>Formulario</p>
+                </div>
+
+                <div onclick="pag_viagem()" class="box-container-menu">
+                    <div class="viagem"></div>
+                    <p>Viagens</p>
+                </div>
+
+               
+
+                <div onclick="sair()" class="box-container-menu">
+                    <div class="sair"></div>
+                    <p>Sair</p>
+                </div>
+
+            </div>
+            <div class="container-viagens" id="minha_viagem">
+                <div style="display: none;" id="teste">
+    
+                    <div id="feed_container"></div>
+                    <div id="divNome"></div>
+                </div>
+            </div>
+
+            <div id="form_viagem" style="display: block;" class="box-form">
+
+                <p>Preencha esse formulário para iniciarmos a consulta:</p>
+                <form id="form_consulta">
+                    <input placeholder="nome completo" class="form-100" type="text">
+                    <input name="email" placeholder="e-mail" class="form-50" type="text">
+                    <input name="telefone" placeholder="telefone" class="form-50" type="text">
+                    <input placeholder="Idade" class="form-50" type="text">
+                    <input placeholder="Quantas pessoas?" class="form-50" type="text">
+                    <input placeholder="Tempo de duração de viagem" class="form-100" type="text">
+                    <input name="destino" id="ipt_destino" placeholder="Qual o destino? Se mais de um, coloque vírgula"
+                        class="form-100" type="text">
+                    <input placeholder="Por onde prefere ser contatado?" class="form-50" type="text">
+                    <input placeholder="Em que parte do dia" class="form-50" type="text">
+                    <br>
+                </form>
+                <button onclick=" return execute()" class="btn-enviar" method="POST">Enviar</button>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+   
+</body>
+
+</html>
+
+<script>
+
+    verificar_autenticacao();
+
+    function execute() {
+        var formulario = new URLSearchParams(new FormData(form_consulta));
+        var idUsuario = sessionStorage.id_usuario_meuapp;
+        fetch(`/consultas/consultar/${idUsuario}`, {
+            method: "POST",
+            body: formulario
+
+        }).then(function (response) {
+            alert('ok')
+
+            if (response.ok) {
+                alert('foi')
+                obterPublicacoes(idUsuario);
+
+                // window.location.href='cliente2.html';
+
+            } else {
+
+                alert('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+            }
+        });
+
+        return false;
+    }
+
+    function obterPublicacoes(idUsuario) {
+        // aguardar();
+        var idUsuario = sessionStorage.id_usuario_meuapp;
+        fetch(`/consultas/${idUsuario}`)
+            .then(resposta => {
+                if (resposta.ok) {
+                    resposta.json().then(function (resposta) {
+                        atualizarFeed(resposta);
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        
+                        alert('obterPublicacoes')
+                        // finalizarAguardar();
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                    alert('nao foi aqui')
+
+                    // finalizarAguardar("Nenhum resultado encontrado ou erro na API");
+
+                }
+            })
+            .catch(function (error) {
+
+                console.error(`Erro na obtenção das publicações: ${error.message}`);
+            });
+    }
+
+    function atualizarFeed(consultas) {
+        var feed = document.getElementById("feed_container");
+        feed.innerHTML = "";
+        for (let contador = 0; contador < consultas.length; contador++) {
+            var consulta = consultas[contador];
+            
+            var divConsulta = document.createElement("div")
+            var divNome = document.createElement("div")
+
+            divNome.innerHTML = `Voce tem uma viagem em consultoria para ${consulta.destino}.`;
+            divConsulta.appendChild(divNome);
+
+            feed.appendChild(divConsulta);
+
+
+        }
+    }
+
+
+
+
+    // var destinos = [];
+    var contador = 0;
+    function executar() {
+        var destinook = ipt_destino.value;
+        destinos.push(destinook);
+
+        alert(`Sua viagem com destino a/o ${destinos[contador]} foi registrada com sucesso.`);
+        contador++;
+        ipt_destino.value = '';
+    }
+
+    function formulario() {
+
+        form_viagem.style.display = 'block';
+        teste.style.display = 'none';
+    }
+
+    function pag_viagem() {
+        form_viagem.style.display = 'none';
+        teste.style.display = 'block'
+        teste.innerHTML = `Voce tem ${destinos.length} viagens em análise na consultoria.<br>`;
+    }
+
+    function sair() {
+        window.location.href = 'index.html';
+    }
+
+
+</script>

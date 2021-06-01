@@ -26,9 +26,9 @@
 
     </div>
 
-    <div class="right-tela">
+    <div  class="right-tela">
         <div class="container-right-tela">
-            <form action="">
+        <form id="div_teste" style="display: block;" action="">
             <h2>Preencha o formulário para fazer sua consulta:</h2>
             <input class="form-100" placeholder="Nome Completo" type="text">
             <input class="form-50" placeholder="E-mail" type="text">
@@ -55,6 +55,6 @@
 
     function enviar(){
         alert('Suas informações foram enviadas com sucesso. Dentro de 1 semana entraremos em contatos com você.')
-        
+        div_teste.style.dislay = 'none';
     }
 </script>

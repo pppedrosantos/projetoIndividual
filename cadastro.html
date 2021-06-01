@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="icons/world.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pesquisa-login">
+
+
+        <div class="midia">
+            <div> <img src="..//projetoIndividual/icons/facebook.png" alt=""></div>
+            <div> <img src="icons/youtube-logotype.png" alt=""></div>
+            <div> <img src="icons/instagram.png" alt=""></div>
+        </div>
+
+        <div class="div_pesquisa">
+            <img onclick="aparecer()" src="icons/lupa-de-pesquisa.png" class="aparecer" alt="">
+            <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
+            <img id="logar" onclick="login()" class="aparecer" src="icons/user.png" alt="">
+            <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
+                src="icons/login.png" alt="">
+
+        </div>
+    </div>
+
+    <div class="header">
+
+        <div class="container">
+            <div><img class="logo" src="image/thinktrip .png" alt=""></div>
+            <hr>
+
+            <nav class="barra-navecao">
+                <ul class="lista-ul">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="sobre.html">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="consultoria.html">
+                        <li>Consultoria</li>
+                    </a>
+                    <a href="contato.html">
+                        <li>Contato</li>
+                    </a>
+                    <a href="destinos.html">
+                        <li>Destinos Procurados</li>
+                    </a>
+                    <a href="cadastro.html">
+                        <li>Cadastrar</li>
+                    </a>
+                    <a href="login.html">
+                        <li>Login</li>
+                    </a>
+                </ul>
+                <!--lista-navegacao-->
+            </nav>
+            <!--barra-navecao-->
+        </div>
+        <!--container-->
+    </div>
+
+        <div class="center">
+            <div class="container-login">
+                <div class="box-login">
+                    <div class="left-box-login"></div>
+                    <div class="right-box-login">
+    
+                        <form id="form_cadastro" class="form-registrar">
+                           
+                            <h3>Cadastrar</h3>
+                            <input class="ipt_padrao" required id="ipt_nome" name="nome" type="text" placeholder="nome"><br>
+                            <input class="ipt_padrao" required id="ipt_login" name="login" type="email" placeholder="e-mail"><br>
+                            <input class="ipt_padrao" required id="ipt_senha" name="senha" type="password" placeholder="senha"><br>
+                            <input class="ipt_padrao" id="ipt_senha2" type="password" placeholder="confirme a senha"><br>
+                            
+
+                            <button onclick="return cadastrar()"  method="POST" class="btn_entrar">Registrar</button>
+
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="footer"> Desenvolvido por um aluno Bandtec</div>
+</body>
+</html>
+
+<script>
+
+
+function cadastrar() {
+    if(ipt_nome.value == '' || ipt_login.value == '' || ipt_senha.value == '' ) {
+        ipt_nome.value = '';
+        ipt_login.value = '';
+        ipt_senha.value = '';
+        alert('erro no cadastro')
+    } else if(ipt_senha.value !== ipt_senha2.value) {
+        ipt_nome.value = '';
+        ipt_login.value = '';
+        ipt_senha.value = '';
+        ipt_senha2.value = '';
+        alert('A senha não coferem. Tente preenche-las certo.')
+    }
+    else{   
+       
+        var formulario = new URLSearchParams(new FormData(form_cadastro));
+        
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            body: formulario
+            
+        }).then(function (response) {
+            alert('ok')
+            
+            if (response.ok) {
+                
+                window.location.href='login.html';
+
+            } else {
+
+                alert('Erro de cadastro!');
+                response.text().then(function (resposta) {
+                    div_erro.innerHTML = resposta;
+                });
+                finalizar_aguardar();
+            }
+        });
+
+        return false;
+    }
+}
+
+    function aguardar() {
+        btn_entrar.disabled = true;
+        img_aguarde.style.display='block';
+        div_erro.style.display='none';
+    }
+
+    function finalizar_aguardar() {
+        btn_entrar.disabled = false;
+        img_aguarde.style.display='none';
+        div_erro.style.display='block';
+    }
+
+</script>

@@ -1,26 +1,26 @@
 .header-sobre{
-    height: 250px;
+    height: 290px;
 }
 
 .center{
-    height: 1250px;
+    height: 1390px;
 }
 .center-sobre{
     background-color: gray;
-    height: 900px;
+    height: 1020px;
     margin: 0 200px;
 }
 
 .left-center-sobre{
     width: 40%;
-    height: 500px;
+    height: 550px;
     float: left;
     background-image: url(..//image/sobre.jpg);
     background-size: cover;
 }
 
 .right-center-sobre{
-    height: 500px;
+    height: 550px;
     width: 60%;
     background-color: rgb(218, 218, 218);
     float: right;
@@ -44,7 +44,7 @@
 }
 
 .left-center-sobre2{
-    height: 400px;
+    height: 470px;
     width: 55%;
      background-color: rgb(218, 218, 218);
     float: left;
@@ -63,5 +63,5 @@
     background-size: cover;
     float: right;
     width: 45%;
-    height: 400px;
+    height: 470px;
 }

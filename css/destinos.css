@@ -1,0 +1,34 @@
+.tela-central{
+    height: 350px;
+}
+.box-central{
+    height: 300px;
+    margin: 0 250px;
+    background-color: rgb(225, 225, 225);
+}
+
+.box-central-esquerda{
+    width: 40%;
+    /* background-color: #ccc; */
+    float: left;
+    height: 300px;
+}
+
+.box-central-direita{
+    float: right;
+    width: 60%;
+    /* background-color: darkkhaki; */
+    height: 300px;
+}
+
+.box-central-direita h5{
+    margin-top: 40px;
+    font-size: 20px;
+    color: rgb(208, 99, 60);
+}
+
+.box-central-direita p{
+    max-width: 90%;
+    text-align: justify;
+    font-size: 18px;
+}

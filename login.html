@@ -23,11 +23,11 @@
         </div>
 
         <div class="div_pesquisa">
-            <img onclick="aparecer()" src="..//projetoIndividual/icons/lupa-de-pesquisa.png" class="aparecer" alt="">
+            <img onclick="aparecer()" src="icons/lupa-de-pesquisa.png" class="aparecer" alt="">
             <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
-            <img id="logar" onclick="login()" class="aparecer" src="..//projetoIndividual/icons/user.png" alt="">
+            <img id="logar" onclick="login()" class="aparecer" src="icons/user.png" alt="">
             <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
-                src="..//projetoIndividual/icons/login.png" alt="">
+                src="icons/login.png" alt="">
 
         </div>
     </div>
@@ -52,6 +52,12 @@
                     <a href="contato.html">
                         <li>Contato</li>
                     </a>
+                    <a href="destinos.html">
+                        <li>Destinos Procurados</li>
+                    </a>
+                    <a href="cadastro.html">
+                        <li>Cadastrar</li>
+                    </a>
                     <li>Login</li>
                 </ul>
                 <!--lista-navegacao-->
@@ -67,24 +73,17 @@
                 <div class="left-box-login"></div>
                 <div class="right-box-login">
 
-                    <form id="form_login" class="form-login" style="display: block;">
+                    <form id="form_login" class="form-login">
+
                         <h3>Bem-vindo de volta!</h3>
-                        <input class="ipt_padrao" type="text" placeholder="login"><br>
-                        <input class="ipt_padrao" type="text" placeholder="password"><br>
-                        <button class="btn_entrar">Entrar</button>
+
+                        <input class="ipt_padrao" type="text" name="login" placeholder="login"><br>
+                        <input class="ipt_padrao" type="password" name="senha" placeholder="password"><br>
+
+                        <button  method="POST" onclick= "return entrar()" class="btn_entrar">Entrar</button>
+
                         <div onclick="registrar()" class="forgot"> Já possui cadastro? Se cadastre. </div>
                     </form>
-
-                    <form id="form_registro" style="display: none;" class="form-registrar">
-                        <h3>Cadastrar</h3>
-                        <input class="ipt_padrao" type="text" placeholder="nome"><br>
-                        <input class="ipt_padrao" type="text" placeholder="e-mail"><br>
-                        <input class="ipt_padrao" type="password" placeholder="senha"><br>
-                        <input class="ipt_padrao" type="password" placeholder="confirme a senha"><br>
-                        <button class="btn_entrar">Registrar</button>
-                        <div onclick="logar()" class="forgot">Já pode se logar.</div>
-                    </form>
-
                 </div>
             </div>
         </div>
@@ -99,16 +98,42 @@
 
 <script>
 
-    function registrar(){
-        
-        form_registro.style.display = 'block';
-        form_login.style.display = 'none';
 
-    }
+function entrar() {
+    alert('ola')
+        var formulario = new URLSearchParams(new FormData(form_login));
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            body: formulario
+        }).then(resposta => {
+            
+            if (resposta.ok) {
 
-    function logar(){
-        form_registro.style.display = 'none';
-        form_login.style.display = 'block';
+                resposta.json().then(json => {
+                    
+                    sessionStorage.login_usuario_meuapp = json.login;
+                    sessionStorage.nome_usuario_meuapp = json.nome;
+                    sessionStorage.id_usuario_meuapp = json.id;
+
+
+                    window.location.href = 'cliente2.html';
+                });
+
+            } else {
+                
+                alert('Erro de login!');
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizar_aguardar(texto);
+                });
+            }
+        });
+
+        return false;
     }
+ function registrar(){
+    window.location.href = 'cadastro.html';
+ }
 
 </script>

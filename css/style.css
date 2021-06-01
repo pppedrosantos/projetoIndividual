@@ -9,8 +9,6 @@ body, h5, h2{
     height: 150px;
     background-size: cover;
     margin-left: 40%;
-    
-    
 }
 
 
@@ -68,26 +66,24 @@ body, h5, h2{
 
 .banner{
     width: 100%;
-    height: 700px;
+    height: 820px;
 }
 
 .right-section{
     float: left;
-   
+    width: 730px;
+    
 }
-
-
 
 .box-right-section{
     overflow: hidden;
-    width: 710px;
-    
+    width: 730px;
 }
 
 
 .center1{
-    width: 710px;
-    height: 400px;
+    width: 730px;
+    height: 430px;
     float: left; 
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
@@ -109,8 +105,8 @@ body, h5, h2{
 
 
 .center2{
-    width: 375px;
-    height: 400px;
+    width: 355px;
+    height: 430px;
     float: right; 
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
@@ -122,8 +118,8 @@ body, h5, h2{
 }
 
 .center3{
-    width: 375px;
-    height: 200px;
+    width: 355px;
+    height: 230px;
     float: right; 
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
@@ -135,16 +131,15 @@ body, h5, h2{
 }
 
 .box-right-section-center4{
-    width: 340px;
-    height: 200px;
+    width: 350px;
+    height: 230px;
     overflow: hidden;
     float: left; 
 }
 
 .center4{
-    width: 340px;
-    height: 200px;
-    
+    width: 350px;
+    height: 230px;
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
     margin-right: 27px;
@@ -156,15 +151,15 @@ body, h5, h2{
 }
 
 .box-right-section-center5{
-    width: 340px;
-    height: 200px;
+    width: 350px;
+    height: 230px;
     overflow: hidden;
     float: right;
 }
 
 .center5{
-    width: 340px;
-    height: 200px; 
+    width: 350px;
+    height: 230px; 
     box-shadow: 2px 2px 2px 2px #ccc;
     cursor: pointer;
     margin-right: 27px;
@@ -177,7 +172,7 @@ body, h5, h2{
 
 
 .barra-navecao{
-    padding-left: 20%;
+    padding-left: 7%;
     overflow: hidden;
     
 }
@@ -200,7 +195,7 @@ ul li:hover{
 
 
 .left-post{
-    width: 700px;
+    width: 750px;
     float: left;
 }
 
@@ -257,11 +252,11 @@ ul li:hover{
 .final-post{
     margin-top: 30px;
     width: 100%;
-    height: 900px;
+    height: 930px;
 }
 
 .teste1{
-    width: 340px;
+    width: 360px;
     height: 250px;
     background-color: gray;
     float: left;
@@ -270,7 +265,7 @@ ul li:hover{
 
 .teste2{
     margin-top: 15px;
-    width: 340px;
+    width: 360px;
     height: 250px;
     background-color: gray;
     float: right;
@@ -356,8 +351,6 @@ ul li:hover{
     height: 100%;
     background-size: cover;
     background-position: center;
-   
-   
 }
 
 

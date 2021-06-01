@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/destinos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js" integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="pesquisa-login">
+
+
+        <div class="midia">
+            <div> <img src="..//projetoIndividual/icons/facebook.png" alt=""></div>
+            <div> <img src="icons/youtube-logotype.png" alt=""></div>
+            <div> <img src="icons/instagram.png" alt=""></div>
+        </div>
+
+        <div class="div_pesquisa">
+            <img onclick="aparecer()" src="icons/lupa-de-pesquisa.png" class="aparecer" alt="">
+            <input placeholder="pesquisar..." id="ipt_teste" style="display: none;" class="ipt_pesquisa" type="text">
+            <a href="login.html"><img id="logar" onclick="login()" class="aparecer" src="icons/user.png" alt=""></a>
+            <img onclick="saida()" id="sair" style="display: none;" class="aparecer"
+                src="icons/login.png" alt="">
+
+        </div>
+    </div>
+
+    <div class="header">
+
+        <div class="container">
+            <div><img class="logo" src="image/thinktrip .png" alt=""></div>
+            <hr>
+
+            <nav class="barra-navecao">
+                <ul class="lista-ul">
+                    <a href="index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="sobre.html">
+                        <li>Sobre</li>
+                    </a>
+                    <a href="consultoria.html">
+                        <li>Consultoria</li>
+                    </a>
+                    <a href="contato.html">
+                        <li>Contato</li>
+                    </a>
+                    <li>Destinos Procurados</li>
+                    <a href="cadastro.html">
+                        <li>Cadastrar</li>
+                    </a>
+                    <a style="text-decoration: none;" href="login.html">
+                        <li>Login</li>
+                    </a>
+                </ul>
+                <!--lista-navegacao-->
+            </nav>
+            <!--barra-navecao-->
+        </div>
+        <!--container-->
+    </div>
+
+   
+    <div class="tela-central">
+        <div class="box-central">
+          <div class="box-central-esquerda">
+              <div style="width: 280px; margin-top: 10px;">
+                    <canvas style="width: 80; height: 80;" id="chart"></canvas>
+                </div>
+          </div>
+          <div class="box-central-direita"> <h5>Destinos mais procurados</h5>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio aut laboriosam molestias, nesciunt veniam voluptatibus fugit magnam quos distinctio? Est praesentium tempore similique delectus ut temporibus quidem eaque neque illum!</p> </div>
+        </div>
+    </div>
+
+    <div class="footer"> Desenvolvido por um aluno Bandtec</div>
+   
+
+</body>
+</html>
+
+<script>
+
+var eua = parseInt(Math.random() * 100) + 1;
+var argentina = parseInt(Math.random() * 100) + 1;
+var portugal = parseInt(Math.random() * 100) + 1;
+var chile = parseInt(Math.random() * 100) + 1;
+var espanha = parseInt(Math.random() * 100) + 1;
+
+var somatorio = Number(eua) + Number(argentina) + Number(portugal) + Number(chile) + Number(espanha);
+
+eua = somatorio / eua;
+eua = 100 / eua;
+
+argentina = somatorio / argentina;
+eargentina = 100 / argentina;
+
+portugal = somatorio / portugal;
+portugal = 100 / portugal;
+
+chile = somatorio / chile;
+chile = 100 / chile;
+
+espanha = somatorio /espanha;
+espanha = 100 / espanha;
+
+
+var ctx = chart.getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['EUA', 'Lisboa', 'Noronha', 'Chile', 'Espanha'],
+        datasets: [{
+            label: 'Destinos mais procurados',
+            
+            data: [eua.toFixed(2), argentina.toFixed(2), portugal.toFixed(2), chile.toFixed(2), espanha.toFixed(2)],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(218, 165, 32, 0.5)',
+                'rgba(62, 105, 214, 0.5)',
+                'rgba(171, 62, 214, 0.5)'
+            
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(218, 165, 32, 1)',
+                'rgba(62, 105, 214, 1)',
+                'rgba(171, 62, 214, 1)'
+                
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        scales: { 
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+
+
+
+</script>
+
+
